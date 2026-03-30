@@ -5,8 +5,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
 
-//    alias(libs.plugins.android.kotlin.multiplatform.library)
-
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.android.kotlin.multiplatform.library)
     alias(libs.plugins.vanniktech.mavenPublish)
@@ -44,16 +42,14 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation("io.ktor:ktor-network:3.4.1")
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
 
 
             implementation("com.russhwolf:multiplatform-settings-no-arg:1.3.0")
-
-
+            implementation("io.ktor:ktor-network:3.4.1")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 
         }
 
@@ -62,6 +58,7 @@ kotlin {
         }
 
         jvmMain.dependencies {
+
         }
 
     }
@@ -85,14 +82,14 @@ mavenPublishing {
     coordinates(
         groupId = group.toString(),
         version = version.toString(),
-        artifactId = "nexus-player-kmp"
+        artifactId = "printer-kmp"
     )
 
     pom {
-        name = "Nexus Player KMP"
-        description = "A high-performance, Kotlin Multiplatform (KMP) video player library designed for Compose Multiplatform. Providing a seamless media experience across Android, iOS, Desktop (JVM), and Web (Wasm), this library simplifies cross-platform video integration with a unified API."
+        name = "Printer KMP"
+        description = "Lightweight Kotlin Multiplatform printer library supporting Android and Desktop targets, designed for easy integration with thermal and document printers."
         inceptionYear = "2026"
-        url = "https://github.com/mamon-aburawi/Nexus-Player-KMP"
+        url = "https://github.com/mamon-aburawi/Printer-KMP"
         licenses {
             license {
                 name = "MIT License"
@@ -106,7 +103,7 @@ mavenPublishing {
             }
         }
         scm {
-            url = "https://github.com/mamon-aburawi/Nexus-Player-KMP"
+            url = "https://github.com/mamon-aburawi/Printer-KMP"
         }
     }
 
