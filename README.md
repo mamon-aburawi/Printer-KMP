@@ -73,7 +73,7 @@ val tcpConnection = TcpConnection(ipAddress = "192.168.1.100", port = 9100, auto
 The `UsbConnection` handles the heavy lifting of direct hardware communication.
 
 ```kotlin
-val usbConnection = UsbConnection(autoConnect = false)
+val usbConnection = remember { UsbConnection(autoConnect = false) }
 
 // On Android: Connect via raw Hardware IDs to bypass the OS spooler, you can use fun scanForAvailablePrinters to get you device data
 usbConnection.connectViaUsb(
@@ -107,7 +107,7 @@ if (printerErrors == ConnectionError.DEVICE_OFFLINE) {
 Before connecting, you can easily scan for physically connected USB printers (Android) or installed system printers (Desktop).
 
 ```kotlin
-val usbConnection = UsbConnection(autoConnect = false)
+val usbConnection = remember { UsbConnection(autoConnect = false) }
 
 // 1. Trigger the background hardware scan
 coroutineScope.launch {
