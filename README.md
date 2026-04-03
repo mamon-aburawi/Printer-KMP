@@ -1,5 +1,12 @@
 # 🖨️ Printer-KMP
 
+![Kotlin](https://img.shields.io/badge/kotlin-multiplatform-blue.svg?logo=kotlin)
+![Compose](https://img.shields.io/badge/Compose-Multiplatform-green.svg)
+![Android](https://img.shields.io/badge/Android-3DDC84.svg?logo=android&logoColor=white)
+![Desktop](https://img.shields.io/badge/Desktop-4A4A55.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)
+
 **Printer-KMP** is a powerful, lightweight Kotlin Multiplatform library designed to make interacting with ESC/POS thermal receipt printers effortless. Built exclusively for **Android** and **Desktop (JVM)** targets, this library provides a fluent API for hardware control, reactive connection monitoring, and seamless Jetpack Compose UI capturing.
 
 ---
@@ -42,15 +49,13 @@ kotlin {
 ### 🤖 Android Setup
 To allow the library to communicate with network and USB printers on Android, you must add the following permissions and features to your `androidApp/src/main/AndroidManifest.xml`:
 
-```xml
-<manifest xmlns:android="[http://schemas.android.com/apk/res/android](http://schemas.android.com/apk/res/android)">
-    
-    <uses-permission android:name="android.permission.INTERNET" />
+```
 
-    <uses-permission android:name="android.permission.USB_PERMISSION" />
-    <uses-feature android:name="android.hardware.usb.host" android:required="true" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.USB_PERMISSION" />
 
-</manifest>
+<uses-feature android:name="android.hardware.usb.host" android:required="true" />
+
 ```
 
 
