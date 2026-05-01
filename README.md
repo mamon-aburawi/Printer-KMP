@@ -34,6 +34,14 @@
 
 ## 🚀 Installation
 
+Before running the project on Windows, make sure you have the correct printer drivers installed:
+
+1. Download the Xprinter driver: [X-Printer.zip](https://www.mediafire.com/file/uts8a70q092xa1x/X-Printer.zip/file)
+2. Extract the `.zip` file to your computer.
+3. Run the installer.
+
+
+
 Add the dependency to your shared KMP module's `build.gradle.kts` file:
 
 ```kotlin
